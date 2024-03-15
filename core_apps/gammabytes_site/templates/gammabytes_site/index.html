@@ -1,0 +1,806 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GammaBytes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'gammabytes_site/media/small.png' %}">
+    <link rel="stylesheet" href="{% static 'gammabytes_site/css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'gammabytes_site/css/vendor/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'gammabytes_site/css/vendor/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'gammabytes_site/css/vendor/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'gammabytes_site/css/vendor/sal.css' %}">
+    <link rel="stylesheet" href="{% static 'gammabytes_site/css/vendor/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'gammabytes_site/css/vendor/green-audio-player.min.css' %}">
+    <link rel="stylesheet" href="{% static 'gammabytes_site/css/vendor/odometer-theme-default.css' %}">
+
+    <!-- Site Stylesheet -->
+    <link rel="stylesheet" href="{% static 'gammabytes_site/css/app.css' %}">
+
+    <style>
+        .axil-mainmenu {
+            padding: 0px 60px;
+        }
+    
+        @media (max-width: 430px) {
+            .axil-mainmenu {
+                padding: 0px 0px;;
+            }
+        }
+        @media (max-width: 300px) {
+            .light-version-logo {
+                display: none;
+            }
+            .dark-version-logo {
+                display: none;
+            }
+            .header-logo.new-image {
+                display: block;
+            }
+        }
+
+        
+        
+    </style>
+
+</head>
+
+<body class="sticky-header onepage-template">
+   
+    <a href="#main-wrapper" id="backto-top" class="back-to-top">
+        <i class="far fa-angle-double-up"></i>
+    </a>
+
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+
+    <div class="my_switcher d-none d-lg-block">
+        <ul>
+            <li title="Light Mode">
+                <a href="javascript:void(0)" class="setColor light" data-theme="light">
+                    <i class="fal fa-lightbulb-on"></i>
+                </a>
+            </li>
+            <li title="Dark Mode">
+                <a href="javascript:void(0)" class="setColor dark" data-theme="dark">
+                    <i class="fas fa-moon"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Case Study Modal Box -->
+    <div class="op-case-modal op-modal-wrap">
+        <div class="op-modal-inner">
+            <button class="close"><i class="far fa-times"></i></button>
+            <div class="op-modal-content">
+                <div class="case-content"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Case Study Modal Box -->
+
+    <!-- Portfolio Modal Box -->
+    <div class="op-portfolio-modal op-modal-wrap">
+        <div class="op-modal-inner">
+            <button class="close"><i class="far fa-times"></i></button>
+            <div class="op-modal-content">
+                <div class="portfolio-thumbnail"></div>
+                <div class="portfolio-content"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal Box -->
+
+    <!-- Blog Modal Box -->
+    <div class="op-blog-modal op-modal-wrap">
+        <div class="op-modal-inner">
+            <button class="close"><i class="far fa-times"></i></button>
+            <div class="op-modal-content">
+                <div class="post-thumbnail"></div>
+                <div class="post-content"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Modal Box -->
+
+    <div id="main-wrapper" class="main-wrapper">
+
+
+        <!--=====================================-->
+        <!--=        Header Area Start       	=-->
+        <!--=====================================-->
+        <header class="header axil-header header-style-2">
+            <div id="axil-sticky-placeholder"></div>
+            <div class="axil-mainmenu">
+                <div class="container-fluid">
+                    <div class="header-navbar">
+                        <div class="header-logo">
+                            <a href="#"><img class="light-version-logo" src="{% static 'gammabytes_site\media\gamma-logo-1.svg' %}"
+                                    alt="logo"></a>
+                            <a href="#"><img class="dark-version-logo" src="{% static 'gammabytes_site\media\gamma-logo-2.png' %}"
+                                    alt="logo"></a>
+                                    <!-- <a href="index.html" class="new-image"><img src="assets\media\gamma-small-logo-1.png" alt="new logo"></a> -->
+
+                        </div>
+                        <div class="header-main-nav">
+                            
+                            <!-- Start Mainmanu Nav -->
+                            <nav class="mainmenu-nav" id="mobilemenu-popup">
+                                <div class="d-block d-lg-none">
+                                    <div class="mobile-nav-header">
+                                        <div class="mobile-nav-logo">
+                                            <a href="#">
+                                                <img class="light-mode" src="{% static 'gammabytes_site/media/gamma-logo-1.svg' %}" alt="Site Logo">
+                                                <img class="dark-mode" src="{% static 'gammabytes_site/media/gamma-logo-2.svg' %}" alt="Site Logo">
+                                                
+                                            </a>
+                                        </div>
+                                        <button class="mobile-menu-close" data-bs-dismiss="offcanvas"><i
+                                                class="fas fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <ul class="mainmenu" id="onepagenav">
+                                    <li>
+                                        <a href="#op-home">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#op-about-us">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#op-service">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#op-portfolio">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="#op-teams">Team</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#op-contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- End Mainmanu Nav -->
+                        </div>
+                        <div class="header-action">
+                            <ul class="list-unstyled">
+                                
+                                <li class="mobile-menu-btn sidemenu-btn d-lg-none d-block">
+                                    <button class="btn-wrap btn-dark" data-bs-toggle="offcanvas"
+                                        data-bs-target="#mobilemenu-popup">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </li>
+                                <li class="my_switcher d-block d-lg-none">
+                                    <ul>
+                                        <li title="Light Mode">
+                                            <a href="javascript:void(0)" class="setColor light" data-theme="light">
+                                                <i class="fal fa-lightbulb-on"></i>
+                                            </a>
+                                        </li>
+                                        <li title="Dark Mode">
+                                            <a href="javascript:void(0)" class="setColor dark" data-theme="dark">
+                                                <i class="fas fa-moon"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--=====================================-->
+        <!--=        Banner Area Start         =-->
+        <!--=====================================-->
+        <section class="banner banner-style-2" id="op-home">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="banner-content" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
+                            <h1 class="title">Welcome to GammaBytes</h1>
+                            <a href="#op-portfolio" class="axil-btn btn-fill-white btn-large">View Projects</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <ul class="list-unstyled shape-group-18">
+                <li class="shape shape-1" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="100"><img
+                        src="{% static 'gammabytes_site/media/banner/banner-shape-1.png' %}" alt="Shape"></li>
+                <li class="shape shape-2" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="100"><img
+                        src="{% static 'gammabytes_site/media/banner/banner-shape-2.png' %}" alt="Shape"></li>
+                <li class="shape shape-3" data-sal="zoom-in" data-sal-duration="500" data-sal-delay="600"><img
+                        src="{% static 'gammabytes_site/media/others/bubble-16.png' %}" alt="Shape"></li>
+                <li class="shape shape-4" data-sal="zoom-in" data-sal-duration="500" data-sal-delay="600"><img
+                        src="{% static 'gammabytes_site/media/others/bubble-15.png' %}" alt="Shape"></li>
+                <li class="shape shape-5" data-sal="zoom-in" data-sal-duration="500" data-sal-delay="600"><img
+                        src="{% static 'gammabytes_site/media/others/bubble-14.png' %}" alt="Shape"></li>
+                <li class="shape shape-6" data-sal="zoom-in" data-sal-duration="500" data-sal-delay="600"><img
+                        src="{% static 'gammabytes_site/media/others/bubble-16.png' %}" alt="Shape"></li>
+                <li class="shape shape-7" data-sal="slide-down" data-sal-duration="500" data-sal-delay="600"><img
+                        src="{% static 'gammabytes_site/media/others/bubble-26.png' %}" alt="Shape"></li>
+            </ul>
+        </section>
+
+
+        <!-- <iframe src='https://my.spline.design/cybermannequin-61c1abfc324bba743e672d2c278aa3d0/' frameborder='5' width='440' height='400'></iframe> -->
+
+
+
+        <!--=====================================-->
+        <!--=        About Us Area Start         =-->
+        <!--=====================================-->
+        <br><br>
+
+        <section class="section section-padding-equal bg-color-light" id="op-about-us">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 sal-animate" data-sal="slide-up" data-sal-duration="800">
+                        <div class="about-us">
+                            <div class="section-heading heading-left mb-0">
+                                <span class="subtitle">About Us</span>
+                                <h2 class="title mb--40">We code, develop &amp; solve problems.</h2>
+                                <p>Welcome to <b>GammaBytes</b> , founded by three passionate students fresh from
+                                    academia, driven to revolutionize the industry. With boundless creativity and a
+                                    relentless pursuit of excellence, we bring a fresh perspective to every project.
+                                    Despite our small team, our ambition knows no bounds. </p>
+                                <p>Our team may be small, but our ambition knows no bounds. We thrive on challenges and
+                                    are committed to pushing the boundaries of what's possible. With a blend of youthful
+                                    energy and a hunger for success, we are poised to make a significant impact in the
+                                    world of software. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 offset-xl-1 sal-animate" data-sal="slide-up" data-sal-duration="800"
+                        data-sal-delay="100">
+                        <div class="contact-form-box" style="padding: 10px;">
+
+                            <iframe src='https://my.spline.design/cybermannequin-61c1abfc324bba743e672d2c278aa3d0/'
+                                style='border-radius: 20px;' frameborder='0' width='500' height='500'></iframe>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="shape-group-6 list-unstyled">
+                <li class="shape shape-1"><img src="{% static 'gammabytes_site/media/bubble-7.png' %}" alt="Bubble"></li>
+                <li class="shape shape-2"><img src="{% static 'gammabytes_site/media/line-4.png' %}" alt="line"></li>
+                <li class="shape shape-3"><img src="{% static 'gammabytes_site/media/line-5.png' %}" alt="line"></li>
+            </ul>
+        </section>
+
+
+
+
+        <!--=====================================-->
+        <!--=        Service Area Start         =-->
+        <!--=====================================-->
+        <section class="section section-padding-2 bg-color-dark" id="op-service">
+            <div class="container">
+                <div class="section-heading heading-light-left">
+                    <span class="subtitle">What We Can Do For You</span>
+                    <h2 class="title">Services we can help you with</h2>
+                    <!-- <p class="opacity-50">Nulla facilisi. Nullam in magna id dolor
+                        blandit rutrum eget vulputate augue sed eu imperdiet.</p> -->
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800"
+                        data-sal-delay="100">
+                        <div class="services-grid">
+                            <div class="thumbnail">
+                                <img src="{% static 'gammabytes_site\media\icon\website.webp' %}" alt="icon">
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Website Development</h5>
+                                <p>We leverage our technical expertise to deliver tailored Website that cater to our
+                                    client's unique business requirements, regardless of their complexity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800"
+                        data-sal-delay="200">
+                        <div class="services-grid active">
+                            <div class="thumbnail">
+                                <img src="{% static 'gammabytes_site/media/icon/icon-2.png' %}" alt="icon">
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Custom Software Development</h5>
+                                <p>With our assistance, you will gain a competitive advantage in the market, empowered
+                                    with effective solutions at all the significant stages of your workflow.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800"
+                        data-sal-delay="300">
+                        <div class="services-grid">
+                            <div class="thumbnail">
+                                <img src="{% static 'gammabytes_site\media\icon\artificial-intelligence.webp' %}" alt="icon">
+                            </div>
+                            <div class="content">
+                                <h5 class="title">AI Software Development</h5>
+                                <p>Make the most of the latest AI tech in computer vision, natural language processing,
+                                    intelligent automation, and more with LLMs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800"
+                        data-sal-delay="100">
+                        <div class="services-grid">
+                            <div class="thumbnail">
+                                <img src="{% static 'gammabytes_site\media\icon\mobile.webp' %}" alt="icon">
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Mobile Development</h5>
+                                <p>Elevate your digital presence with GammaBytes' bespoke mobile applications,
+                                    meticulously crafted to engage users and drive results.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800"
+                        data-sal-delay="200">
+                        <div class="services-grid">
+                            <div class="thumbnail">
+                                <img src="{% static 'gammabytes_site\media\icon\automation.webp' %}" alt="icon">
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Automation </h5>
+                                <p>GammaBytes simplifies complexity with automation, driving productivity and
+                                    scalability for your business operations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800"
+                        data-sal-delay="300">
+                        <div class="services-grid">
+                            <div class="thumbnail">
+                                <img src="{% static 'gammabytes_site/media/icon/icon-6.png' %}" alt="icon">
+                            </div>
+                            <div class="content">
+                                <h5 class="title">UI/UX Design</h5>
+                                <p>Transform your vision into reality with GammaBytes' captivating UI/UX design
+                                    services, where aesthetics meet functionality to deliver seamless and delightful
+                                    user experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-unstyled shape-group-10">
+                <li class="shape shape-1"><img src="{% static 'gammabytes_site/media/others/line-9.png' %}" alt="Circle"></li>
+                <li class="shape shape-2"><img src="{% static 'gammabytes_site/media/others/bubble-42.png' %}" alt="Circle"></li>
+                <li class="shape shape-3"><img src="{% static 'gammabytes_site/media/others/bubble-43.png' %}" alt="Circle"></li>
+            </ul>
+        </section>
+        <!--=====================================-->
+        <!--=        Project Area Start         =-->
+        <!--=====================================-->
+        <section class="section section-padding-2 bg-color-light" id="op-portfolio">
+            <div class="container">
+                <div class="section-heading heading-left">
+                    <span class="subtitle">Our Project</span>
+                    <h2 class="title">Some of our <br> finest work.</h2>
+                </div>
+                <div class="axil-isotope-wrapper">
+                    <!-- <div class="isotope-button isotope-project-btn">
+                        <button data-filter="*" class="is-checked"><span class="filter-text">All Works</span></button>
+                        <button data-filter=".branding"><span class="filter-text">Branding</span></button>
+                        <button data-filter=".mobile"><span class="filter-text">Mobile</span></button>
+                    </div> -->
+                    <div class="row row-35 isotope-list">
+                        <div class="col-md-6 project branding">
+                            <div class="project-grid">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="{% static 'gammabytes_site\media\project\pharmafriend.png' %}" alt="project">
+                                    </a>
+                                    <img class="modal-thumb" src="{% static 'gammabytes_site\media\project\pharmafriend.png' %}" alt="project">
+                                </div>
+                                <div class="content">
+                                    <h4 class="title"><a href="#">PharmaFriend</a></h4>
+                                    <span class="subtitle">Website for comparing pricing of medicines on multiple online
+                                        platforms.
+                                        Tech Stack: Python, Django, Selenium</span>
+                                    <div class="details-description">
+                                        <p>Welcome to PharmaFriend, your one-stop destination for all your medical
+                                            needs! We are committed to providing you with the best prices for medicines
+                                            by comparing prices from different websites, so you can make an informed
+                                            decision about your purchase.
+                                            But that's not all - we offer consultation services with licensed doctors
+                                            and pharmacists to provide you with the right guidance for your medical
+                                            needs. Our consultation services are available 24/7, so you can get the help
+                                            you need at any time.</p>
+                                        <p> In addition to our consultation services, we also have an e-pharmacy with loads of features such as cart, user management, payment, and more. We've made it easy for you to order your medicines online and have them delivered straight to your doorstep.
+
+                                            We also believe in keeping you informed about government schemes related to healthcare. We provide information about the various schemes available, so you can take advantage of them and save money on your medical bills.
+                                            
+                                            Our website also provides detailed information about medicines such as their benefits, usage, precautions, and alternatives. This way, you can be sure you are making the right choice for your health.
+                                            
+                                            We are committed to providing you with the best experience possible, so feel free to browse our website and explore all that we have to offer. Thank you for choosing us for your medical needs! 💉💊🩺
+                                        </p>
+                                        <p>
+                                            
+                                            
+                                            <b>1. Price Comparision Features page<br></b>
+                                            <img style=" padding: 20px 0px;" src="{% static 'gammabytes_site\media\project\Screenshot (157).png' %}" alt="">
+                                            <b>2. Government Schemes and Medicines page<br></b>
+                                            <img style=" padding: 20px 0px;" src="{% static 'gammabytes_site\media\project\Screenshot (150).png' %}" alt="">
+                                            <b>3. PharmaStore, inhouse e-pharmacy integrated so as to sell medicines online through affiliated pharmacies<br></b>
+                                            <img style=" padding: 20px 0px;" src="{% static 'gammabytes_site\media\project\Screenshot (147).png' %}" alt="">
+                                            <b>4. User Dashboard<br></b>
+                                            <img style=" padding: 20px 0px;" src="{% static 'gammabytes_site\media\project\Screenshot (151).png' %}" alt=""><b>5. Consulting Room<br></b>
+                                            <img style=" padding: 20px 0px;" src="{% static 'gammabytes_site\media\project\Screenshot (148).png' %}" alt=""><b>6. Search Medicine Result<br></b>
+                                            <img style=" padding: 20px 0px;" src="{% static 'gammabytes_site\media\project\Screenshot (155).png' %}" alt="">
+                                            
+                                        </p>
+                                             
+                                        <div class="project-share">
+                                            <a href="https://github.com/dev-agra/PharmaFriend" class="axil-btn btn-fill-primary">Github</a>
+                                            <a href="https://pharmafriend.gammabytes.tech/" class="axil-btn btn-fill-primary" style="margin-left: 10px;">Demo</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 project mobile">
+                            <div class="project-grid">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="{% static 'gammabytes_site\media\project\flamescope.png' %}" alt="project">
+                                    </a>
+                                    <img class="modal-thumb" src="{% static 'gammabytes_site\media\project\flamescope.png' %}" alt="project">
+                                </div>
+                                <div class="content">
+                                    <h4 class="title"><a href="#">FlameScope</a></h4>
+                                    <span class="subtitle">Machine Learning Model that detects fire instances on real-time CCTV camera feed.
+                                        Tech Stack: Python, Yolo, OpenCV, Javascript</span>
+                                    <div class="details-description">
+                                        <p>Developed a fire detection system using CCTV cameras to enhance public safety and minimize property damage. The system should be able to accurately detect fire outbreaks in real-time, trigger an alarm to alert authorities, and provide visual confirmation through CCTV footage. The solution should be scalable, easy to deploy and operate, and reliable in various environmental conditions.
+                                            <div class="project-share">
+                                                <a href="https://github.com/Karunesh16/FlameScope" class="axil-btn btn-fill-primary">Github</a>
+                                                <a href="https://flamescope.gammabytes.tech/" class="axil-btn btn-fill-primary" style="margin-left: 10px;">Demo</a>    
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 project branding">
+                            <div class="project-grid">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="{% static 'gammabytes_site\media\project\pulmodetect.png' %}" alt="project">
+                                    </a>
+                                    <img class="modal-thumb" src="{% static 'gammabytes_site\media\project\pulmodetect.png' %}" alt="project">
+                                </div>
+                                <div class="content">
+                                    <h4 class="title"><a href="#">PulmoDetect</a></h4>
+                                    <span class="subtitle">Comprehensive system for quick diagnosis and aid in Tuberculosis Detection
+                                        Tech Stack: Python, TensorFlow, Django, JavaScript</span>
+                                    <div class="details-description">
+                                        <p>In order to bridge the gap between Deep Learning researchers and medical professionals we
+                                            develop a very accessible free prototype system which can be used by medical professionals
+                                            to understand the reality of Deep Learning tools for chest X-ray diagnostics. The system is
+                                            designed to be a second opinion where a user can process an image to confirm or aid in their
+                                            diagnosis. Code and network weights are delivered via a URL to a web browser (including
+                                            cell phones) but the patient data remains on the users machine and all processing occurs
+                                            locally.</p>
+                                            <p>The system is built upon a deep convolutional neural network (CNN) architecture, trained on a diverse dataset of chest X-ray images from patients with confirmed TB cases and healthy individuals. PulmoDetectTB employs state-of-the-art image processing techniques to extract meaningful features from the X-ray images, allowing for the precise identification of TB-related abnormalities.</p>
+                                        
+                                            <div class="project-share">
+                                                <a href="https://github.com/dev-agra/PulmoDetectTB" class="axil-btn btn-fill-primary">Github</a>
+                                                <a href="https://pulmodetect.gammabytes.tech/" class="axil-btn btn-fill-primary" style="margin-left: 10px;">Demo</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <ul class="shape-group-7 list-unstyled">
+                <li class="shape shape-1"><img src="{% static 'gammabytes_site/media/others/circle-2.png' %}" alt="circle"></li>
+                <li class="shape shape-2"><img src="{% static 'gammabytes_site/media/others/bubble-2.png' %}" alt="Line"></li>
+                <li class="shape shape-3"><img src="{% static 'gammabytes_site/media/others/bubble-1.png' %}" alt="Line"></li>
+            </ul>
+        </section>
+        
+        <!--=====================================-->
+        <!--=        Team members Area Start         =-->
+        <!--=====================================-->
+        <section class="section section-padding bg-color-light pb--70" id="op-teams">
+            <div class="container">
+                <div class="section-heading mb--90">
+                    <span class="subtitle">Team</span>
+                    <h2 class="title">Meet Our Team Members</h2>
+                </div>
+                <div class="process-work sal-animate" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="100">
+                    <div class="thumbnail paralax-image" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg);">
+                    <img src="{% static 'gammabytes_site\media\others\Picture1.png' %}" alt="Thumbnail" style="border-radius: 50%; width: 300px; height: 350px; margin:5px;">
+                </div>
+                    <div class="content">
+                        <span class="subtitle">Member One</span>
+                        <h3 class="title">Devansh Agrahari</h3>
+                        <p>Interested in software development to leverage my strong technical skills and academic foundation
+                            in order to contribute to the development of innovative solutions and gain practical industry experience</p><br>
+                            <a href="{% static 'gammabytes_site\media\Devansh Resume.pdf' %}" class="axil-btn btn-fill-primary">Resume</a>
+                    </div>
+                </div>
+                <div class="process-work content-reverse sal-animate" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="100">
+                    <div class="thumbnail paralax-image">
+                        <img src="{% static 'gammabytes_site\media\others\Picture3.jpg' %}" alt="Thumbnail" style="border-radius: 50%; width: 300px; height: 350px; margin:5px;">
+                    </div>
+                    <div class="content">
+                        <span class="subtitle">Member Two</span>
+                        <h3 class="title">Karunesh Biradar</h3>
+                        <p>Enthusiastic student pursuing opportunities in AI/ML and automation, eager to apply theoretical knowledge in a
+                            practical setting and contribute to innovative projects and enhance skills in the dynamic field of artificial intelligence.</p><br>
+                            <a href="{% static 'gammabytes_site\media\Karunesh Resume.pdf' %}" class="axil-btn btn-fill-primary">Resume</a>
+                    </div>
+                </div>
+                <div class="process-work sal-animate" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="100">
+                    <div class="thumbnail paralax-image">
+                        <img src="{% static 'gammabytes_site\media\others\Picture2.jpg' %}" alt="Thumbnail" style="border-radius: 50%; width: 300px; height: 350px; margin:5px;">
+                    </div>
+                    <div class="content">
+                        <span class="subtitle">Member Three</span>
+                        <h3 class="title">Akash Bhanushali</h3>
+                        <p>passion for innovation and problem-solving, equipped with a solid foundation in cutting-edge technologies and a drive to make meaningful contributions to the digital world. Ready to tackle complex challenges head-on and embark on a journey of continuous learning and growth in the dynamic field of computer science.</p><br>
+                        <a href="{% static 'gammabytes_site\media\Akash Resume.pdf' %}" class="axil-btn btn-fill-primary">Resume</a>
+                    </div>
+                </div>
+                
+            </div>
+            <ul class="shape-group-17 list-unstyled">
+                <li class="shape shape-1"><img src="{% static 'gammabytes_site/media/others/bubble-24.png' %}" alt="Bubble"></li>
+                <li class="shape shape-2"><img src="{% static 'gammabytes_site/media/others/bubble-23.png' %}" alt="Bubble"></li>
+                <li class="shape shape-3"><img src="{% static 'gammabytes_site/media/others/line-4.png' %}" alt="Line"></li>
+                <li class="shape shape-4"><img src="{% static 'gammabytes_site/media/others/line-5.png' %}" alt="Line"></li>
+                <li class="shape shape-5"><img src="{% static 'gammabytes_site/media/others/line-4.png' %}" alt="Line"></li>
+                <li class="shape shape-6"><img src="{% static 'gammabytes_site/media/others/line-5.png' %}" alt="Line"></li>
+            </ul>
+        </section>
+        
+        <!--=====================================-->
+        <!--=        Contact Area Start       	=-->
+        <!--=====================================-->
+        <section class="section-padding bg-color-dark" id="op-contact">
+            <div class="container">
+                <div class="row">
+                    {% for message in messages %}
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                            <div style="width: 90%;margin-bottom: 20px;" class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Hey! </strong> {{message}}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        {% endif %}
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                            <div style="width: 90%;margin-bottom: 20px;" class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Hey! </strong> {{message}}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <div class="col-lg-6" data-sal="slide-up" data-sal-duration="1000">
+                        <div class="contact-address mb--30">
+                            <div class="section-heading heading-light-left">
+                                <span class="subtitle">Need a Help?</span>
+                                <h2 class="title">Let’s work together</h2>
+                            </div>
+                            <div class="address-list">
+                                <div class="address">
+                                    <h6 class="title">Mail</h6>
+                                    <p><a href="mailto:devansh.agrahari@somaiya.edu">devansh.agrahari@somaiya.edu <br>
+                                        karunesh.b@somaiya.edu<br>
+                                        akash.bhanushali@somaiya.edu 
+                                    </a></p>
+                                </div>
+                                <div class="address">
+                                    <h6 class="title">Address</h6>
+                                    <p>KJ Somaiya Sion, Mumbai.</p>
+                                </div>
+                                <div class="address">
+                                    <h6 class="title">Phone</h6>
+                                    <p><a href="tel:+917738574300">+91 7738574300</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
+                        <div class="contact-form-box mb--30">
+                            <h3 class="title">Describe your project</h3>
+                            <form method="POST" action="{% url 'gammabytes_site:contact_form' %}"
+                                class="axil-contact-form">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" name="contact-name"
+                                        placeholder="John Smith">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" name="contact-email"
+                                        placeholder="example@mail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>Company</label>
+                                    <input type="text" class="form-control" name="contact-company">
+                                </div>
+                                <div class="form-group mb--40">
+                                    <label>How can we help you?</label>
+                                    <textarea name="contact-message" id="message" class="form-control textarea"
+                                        cols="30" rows="6"></textarea>
+                                </div>
+                                <div class="form-group text-end">
+                                    <button type="submit" class="axil-btn btn-fill-primary w-auto btn-primary">SEND</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====================================-->
+        <!--=     Call To Action Area Start     =-->
+        <!--=====================================-->
+        <section class="section call-to-action-area">
+            <div class="container">
+                <div class="call-to-action">
+                    <div class="section-heading heading-light">
+                        <span class="subtitle">Let's Work Together</span>
+                        <h2 class="title">Need a successful project?</h2>
+                        <a href="#op-contact" class="axil-btn btn-large btn-fill-white">Estimate Project</a>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="larg-thumb" data-sal="zoom-in" data-sal-duration="600" data-sal-delay="100">
+                            <img class="paralax-image" src="{% static 'gammabytes_site/media/others/chat-group.png' %}" alt="Chat">
+                        </div>
+                        <ul class="list-unstyled small-thumb">
+                            <li class="shape shape-1" data-sal="slide-right" data-sal-duration="800"
+                                data-sal-delay="400">
+                                <img class="paralax-image" src="{% static 'gammabytes_site/media/others/laptop-poses.png' %}" alt="Laptop">
+                            </li>
+                            <li class="shape shape-2" data-sal="slide-left" data-sal-duration="800"
+                                data-sal-delay="300">
+                                <img class="paralax-image" src="{% static 'gammabytes_site/media/others/bill-pay.png' %}" alt="Bill">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-unstyled shape-group-9">
+                <li class="shape shape-1"><img src="{% static 'gammabytes_site/media/others/bubble-12.png' %}" alt="Comments"></li>
+                <li class="shape shape-2"><img src="{% static 'gammabytes_site/media/others/bubble-16.png' %}" alt="Comments"></li>
+                <li class="shape shape-3"><img src="{% static 'gammabytes_site/media/others/bubble-13.png' %}" alt="Comments"></li>
+                <li class="shape shape-4"><img src="{% static 'gammabytes_site/media/others/bubble-14.png' %}" alt="Comments"></li>
+                <li class="shape shape-5"><img src="{% static 'gammabytes_site/media/others/bubble-16.png' %}" alt="Comments"></li>
+                <li class="shape shape-6"><img src="{% static 'gammabytes_site/media/others/bubble-15.png' %}" alt="Comments"></li>
+                <li class="shape shape-7"><img src="{% static 'gammabytes_site/media/others/bubble-16.png' %}" alt="Comments"></li>
+            </ul>
+        </section>
+        <!--=====================================-->
+        <!--=        Footer Area Start       	=-->
+        <!--=====================================-->
+        <footer class="footer-area">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-social-link">
+                        
+                    </div>
+                </div>
+                <div class="footer-main">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-5" data-sal="slide-right" data-sal-duration="800"
+                            data-sal-delay="100">
+                            <div class="footer-widget border-end">
+                               
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-7" data-sal="slide-left" data-sal-duration="800"
+                            data-sal-delay="100">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="footer-widget">
+                                        <h6 class="widget-title">Services</h6>
+                                        <div class="footer-menu-link">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#">Custom Software Development</a></li>
+                                                <li><a href="#">Website Development</a></li>
+                                                <li><a href="#">Mobile App Development</a></li>
+                                                <li><a href="#">AI Software Development</a></li>
+                                                <li><a href="#">Automation</a></li>
+                                                <li><a href="#">UI/UX Design</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="footer-widget">
+                                        <h6 class="widget-title">Resourses</h6>
+                                        <div class="footer-menu-link">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#op-about-us">About Us</a></li>
+                                                <li><a href="#op-portfolio">Projects</a></li>
+                                                <li><a href="#op-teams">Members</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="footer-widget">
+                                        <h6 class="widget-title">Support</h6>
+                                        <div class="footer-menu-link">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#op-contact">Contact</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#">Terms of Use</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom" data-sal="slide-up" data-sal-duration="500" data-sal-delay="100">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-copyright">
+                                <span class="copyright-text">© 2024. All rights reserved by <a
+                                        href="#">GammaBytes</a>.</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-bottom-link">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+    <!-- Jquery Js -->
+    <script src="{% static 'gammabytes_site/js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/odometer.min.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/jquery-appear.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/slick.min.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/sal.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/js.cookie.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/jquery.style.switcher.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/tilt.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/green-audio-player.min.js' %}"></script>
+    <script src="{% static 'gammabytes_site/js/vendor/jquery.nav.js' %}"></script>
+
+    <!-- Site Scripts -->
+    <script src="{% static 'gammabytes_site/js/app.js' %}"></script>
+</body>
+
+
+
+
+</html>
